@@ -1,0 +1,8 @@
+host000
+host001
+host010
+host011
+host100
+host101
+host110
+host111

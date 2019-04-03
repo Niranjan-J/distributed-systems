@@ -1,0 +1,275 @@
+#This file was generated using SimGrid-3.20.0
+#[./a.out --cfg=smpi/privatization:1 --cfg=surf/precision:1e-9 --cfg=network/model:SMPI --cfg=tracing:yes --cfg=tracing/smpi:yes --cfg=tracing/smpi/internals:yes --cfg=tracing/uncategorized:yes ../platforms/hypercube-2d/config.xml smpitmp-appXf5s8x ]
+%EventDef PajeDefineContainerType 0
+%       Alias string
+%       Type string
+%       Name string
+%EndEventDef
+%EventDef PajeDefineVariableType 1
+%       Alias string
+%       Type string
+%       Name string
+%       Color color
+%EndEventDef
+%EventDef PajeDefineStateType 2
+%       Alias string
+%       Type string
+%       Name string
+%EndEventDef
+%EventDef PajeDefineEventType 3
+%       Alias string
+%       Type string
+%       Name string
+%EndEventDef
+%EventDef PajeDefineLinkType 4
+%       Alias string
+%       Type string
+%       StartContainerType string
+%       EndContainerType string
+%       Name string
+%EndEventDef
+%EventDef PajeDefineEntityValue 5
+%       Alias string
+%       Type string
+%       Name string
+%       Color color
+%EndEventDef
+%EventDef PajeCreateContainer 6
+%       Time date
+%       Alias string
+%       Type string
+%       Container string
+%       Name string
+%EndEventDef
+%EventDef PajeDestroyContainer 7
+%       Time date
+%       Type string
+%       Name string
+%EndEventDef
+%EventDef PajeSetVariable 8
+%       Time date
+%       Type string
+%       Container string
+%       Value double
+%EndEventDef
+%EventDef PajeAddVariable 9
+%       Time date
+%       Type string
+%       Container string
+%       Value double
+%EndEventDef
+%EventDef PajeSubVariable 10
+%       Time date
+%       Type string
+%       Container string
+%       Value double
+%EndEventDef
+%EventDef PajeSetState 11
+%       Time date
+%       Type string
+%       Container string
+%       Value string
+%EndEventDef
+%EventDef PajePushState 12
+%       Time date
+%       Type string
+%       Container string
+%       Value string
+%EndEventDef
+%EventDef PajePopState 13
+%       Time date
+%       Type string
+%       Container string
+%EndEventDef
+%EventDef PajeResetState 14
+%       Time date
+%       Type string
+%       Container string
+%EndEventDef
+%EventDef PajeStartLink 15
+%       Time date
+%       Type string
+%       Container string
+%       Value string
+%       StartContainer string
+%       Key string
+%EndEventDef
+%EventDef PajeEndLink 16
+%       Time date
+%       Type string
+%       Container string
+%       Value string
+%       EndContainer string
+%       Key string
+%EndEventDef
+%EventDef PajeNewEvent 17
+%       Time date
+%       Type string
+%       Container string
+%       Value string
+%EndEventDef
+0 1 0 MPI
+2 2 1 MPI_STATE
+4 3 0 1 1 MPI_LINK
+4 4 0 1 1 MIGRATE_LINK
+2 5 1 MIGRATE_STATE
+0 6 0 HOST
+6 0.000000 1 6 0 "host0"
+1 7 6 power "1 1 1"
+1 8 6 power_used "0.5 0.5 0.5"
+6 0.000000 2 6 0 "host1"
+6 0.000000 3 6 0 "host2"
+6 0.000000 4 6 0 "host3"
+0 9 0 LINK
+6 0.000000 5 9 0 "link0"
+1 10 9 bandwidth "1 1 1"
+1 11 9 latency "1 1 1"
+1 12 9 bandwidth_used "0.5 0.5 0.5"
+6 0.000000 6 9 0 "link1"
+6 0.000000 7 9 0 "link2"
+6 0.000000 8 9 0 "link3"
+4 13 0 9 6 0-LINK9-HOST6
+4 14 0 6 9 0-HOST6-LINK9
+4 15 0 9 9 0-LINK9-LINK9
+8 0.000000 7 1 5000000000.000000
+8 0.000000 7 2 5000000000.000000
+8 0.000000 7 3 5000000000.000000
+8 0.000000 7 4 5000000000.000000
+8 0.000000 10 5 125000000.000000
+8 0.000000 11 5 0.000100
+8 0.000000 10 6 125000000.000000
+8 0.000000 11 6 0.000100
+8 0.000000 10 7 125000000.000000
+8 0.000000 11 7 0.000100
+8 0.000000 10 8 125000000.000000
+8 0.000000 11 8 0.000100
+15 0.000000 13 0 topology 5 0
+16 0.000000 13 0 topology 2 0
+15 0.000000 13 0 topology 6 1
+16 0.000000 13 0 topology 3 1
+15 0.000000 13 0 topology 7 2
+16 0.000000 13 0 topology 4 2
+15 0.000000 13 0 topology 8 3
+16 0.000000 13 0 topology 4 3
+15 0.000000 14 0 topology 1 4
+16 0.000000 14 0 topology 5 4
+15 0.000000 14 0 topology 2 5
+16 0.000000 14 0 topology 6 5
+15 0.000000 15 0 topology 5 6
+16 0.000000 15 0 topology 6 6
+15 0.000000 14 0 topology 3 7
+16 0.000000 14 0 topology 7 7
+15 0.000000 14 0 topology 1 8
+16 0.000000 14 0 topology 8 8
+15 0.000000 15 0 topology 5 9
+16 0.000000 15 0 topology 8 9
+6 0.000000 9 1 0 "rank-1"
+5 16 2 PMPI_Init "0 1 0"
+6 0.000000 10 1 0 "rank-2"
+6 0.000000 11 1 0 "rank-3"
+6 0.000000 12 1 0 "rank-4"
+12 0.000000 2 9 16
+13 0.000000 2 9
+12 0.000000 2 10 16
+13 0.000000 2 10
+12 0.000000 2 11 16
+13 0.000000 2 11
+12 0.000000 2 12 16
+13 0.000000 2 12
+8 0.000000 8 2 0.000000
+9 0.000000 8 2 5000000000.000000
+8 0.000000 8 4 0.000000
+9 0.000000 8 4 5000000000.000000
+8 0.000000 8 3 0.000000
+9 0.000000 8 3 5000000000.000000
+8 0.000000 8 1 0.000000
+9 0.000000 8 1 5000000000.000000
+5 17 2 PMPI_Reduce_scatter "0 1 0"
+5 18 2 PMPI_Finalize "0 1 0"
+10 0.000000 8 2 5000000000.000000
+10 0.000000 8 4 5000000000.000000
+10 0.000000 8 3 5000000000.000000
+10 0.000000 8 1 5000000000.000000
+12 0.000000 2 10 17
+15 0.000000 3 0 PTP 10 2_1_-112_1
+12 0.000000 2 12 17
+15 0.000000 3 0 PTP 12 4_1_-112_2
+12 0.000000 2 11 17
+15 0.000000 3 0 PTP 11 3_1_-112_3
+12 0.000000 2 9 17
+8 0.000201 12 5 0.000000
+9 0.000201 12 5 101510500.000000
+9 0.000201 12 5 5075525.000000
+8 0.000201 12 8 0.000000
+9 0.000201 12 8 101510500.000000
+9 0.000201 12 8 5075525.000000
+10 0.000202 12 5 101510500.000000
+10 0.000202 12 5 5075525.000000
+10 0.000202 12 8 101510500.000000
+10 0.000202 12 8 5075525.000000
+16 0.000202 3 0 PTP 9 2_1_-112_1
+16 0.000202 3 0 PTP 9 4_1_-112_2
+8 0.000403 12 6 0.000000
+9 0.000403 12 6 101510500.000000
+9 0.000403 12 5 101510500.000000
+9 0.000403 12 5 5075525.000000
+9 0.000403 12 6 5075525.000000
+10 0.000403 12 6 101510500.000000
+10 0.000403 12 5 101510500.000000
+10 0.000403 12 5 5075525.000000
+10 0.000403 12 6 5075525.000000
+16 0.000403 3 0 PTP 9 3_1_-112_3
+15 0.000403 3 0 PTP 9 1_2_-334_4
+15 0.000403 3 0 PTP 9 1_3_-334_5
+15 0.000403 3 0 PTP 9 1_4_-334_6
+13 0.000403 2 9
+9 0.000403 8 1 5000000000.000000
+10 0.000403 8 1 5000000000.000000
+12 0.000403 2 9 18
+9 0.000605 12 5 101510500.000000
+9 0.000605 12 5 5075525.000000
+9 0.000605 12 8 101510500.000000
+9 0.000605 12 8 5075525.000000
+10 0.000605 12 5 101510500.000000
+10 0.000605 12 5 5075525.000000
+10 0.000605 12 8 101510500.000000
+10 0.000605 12 8 5075525.000000
+16 0.000605 3 0 PTP 10 1_2_-334_4
+13 0.000605 2 10
+16 0.000605 3 0 PTP 12 1_4_-334_6
+13 0.000605 2 12
+9 0.000605 8 4 5000000000.000000
+9 0.000605 8 2 5000000000.000000
+10 0.000605 8 4 5000000000.000000
+10 0.000605 8 2 5000000000.000000
+12 0.000605 2 12 18
+12 0.000605 2 10 18
+9 0.000806 12 5 101510500.000000
+9 0.000806 12 6 101510500.000000
+9 0.000806 12 6 5075525.000000
+9 0.000806 12 5 5075525.000000
+10 0.000806 12 5 101510500.000000
+10 0.000806 12 6 101510500.000000
+10 0.000806 12 6 5075525.000000
+10 0.000806 12 5 5075525.000000
+16 0.000806 3 0 PTP 11 1_3_-334_5
+13 0.000806 2 11
+9 0.000806 8 3 5000000000.000000
+10 0.000806 8 3 5000000000.000000
+12 0.000806 2 11 18
+13 0.000806 2 11
+7 0.000806 1 11
+13 0.000806 2 9
+7 0.000806 1 9
+13 0.000806 2 12
+7 0.000806 1 12
+13 0.000806 2 10
+7 0.000806 1 10
+7 0.000806 6 1
+7 0.000806 6 2
+7 0.000806 6 3
+7 0.000806 6 4
+7 0.000806 9 5
+7 0.000806 9 6
+7 0.000806 9 7
+7 0.000806 9 8

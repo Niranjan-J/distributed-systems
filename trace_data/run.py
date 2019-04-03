@@ -3,13 +3,23 @@
 import subprocess
 
 platforms = {
-    "ring" : "../platforms/ring/config.xml"
+    "ring" : "../platforms/ring/config.xml",
+    "hypercube2D" : "../platforms/hypercube-2d/config.xml",
+    "hypercube3D" : "../platforms/hypercube-3d/config.xml",
 }
 hostfiles = {
-    "ring" : "../platforms/ring/hostfile.txt"
+    "ring" : "../platforms/ring/hostfile.txt",
+    "hypercube2D" : "../platforms/hypercube-2d/hostfile.txt",
+    "hypercube3D" : "../platforms/hypercube-3d/hostfile.txt",
 }
 implementation = {
-    "bcast" : "../implementation/bcast.c"
+    "bcast" : "../implementation/bcast.c",
+    "allgather" : "../implementation/allgather.c",
+    "allreduce" : "../implementation/allreduce.c",
+    "gather" : "../implementation/gather.c",
+    "reduce" : "../implementation/reduce.c",
+    "scatter" : "../implementation/scatter.c",
+    "reduce_scatter" : "../implementation/reduce_scatter.c",
 }
 
 for imp_name,imp_file in implementation.items() :
@@ -29,7 +39,9 @@ for imp_name,imp_file in implementation.items() :
             "--cfg=tracing:yes",
             "--cfg=tracing/smpi:yes",
             "--cfg=tracing/smpi/internals:yes",
+            "--cfg=tracing/uncategorized:yes",
             "--cfg=tracing/filename:" + trace_filename], capture_output=True)
+
         output = subprocess.run(["pj_dump", trace_filename], capture_output=True).stdout.decode("utf-8")
 
         f = open(dump_filename, "w")

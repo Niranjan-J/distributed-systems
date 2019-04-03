@@ -1,0 +1,87 @@
+Container, 0, 0, 0, 0.000605, 0.000605, 0
+Link, 0, 0-LINK9-HOST6, 0.000000, 0.000000, 0.000000, topology, link0, host001, 0
+Link, 0, 0-LINK9-HOST6, 0.000000, 0.000000, 0.000000, topology, link0, host010, 1
+Link, 0, 0-LINK9-HOST6, 0.000000, 0.000000, 0.000000, topology, link0, host011, 2
+Link, 0, 0-LINK9-HOST6, 0.000000, 0.000000, 0.000000, topology, link0, host100, 3
+Link, 0, 0-LINK9-HOST6, 0.000000, 0.000000, 0.000000, topology, link0, host101, 4
+Link, 0, 0-LINK9-HOST6, 0.000000, 0.000000, 0.000000, topology, link0, host110, 5
+Link, 0, 0-LINK9-HOST6, 0.000000, 0.000000, 0.000000, topology, link0, host111, 6
+Link, 0, 0-HOST6-LINK9, 0.000000, 0.000000, 0.000000, topology, host000, link0, 7
+Link, 0, 0-LINK9-LINK9, 0.000000, 0.000000, 0.000000, topology, link0, link0, 8
+Link, 0, MPI_LINK, 0.000000, 0.000202, 0.000202, PTP, rank-1, rank-2, 1_2_-3334_3
+Link, 0, MPI_LINK, 0.000000, 0.000202, 0.000202, PTP, rank-1, rank-3, 1_3_-3334_2
+Link, 0, MPI_LINK, 0.000000, 0.000202, 0.000202, PTP, rank-1, rank-5, 1_5_-3334_1
+Link, 0, MPI_LINK, 0.000202, 0.000403, 0.000201, PTP, rank-5, rank-6, 5_6_-3334_6
+Link, 0, MPI_LINK, 0.000202, 0.000403, 0.000201, PTP, rank-5, rank-7, 5_7_-3334_5
+Link, 0, MPI_LINK, 0.000202, 0.000403, 0.000201, PTP, rank-3, rank-4, 3_4_-3334_4
+Link, 0, MPI_LINK, 0.000403, 0.000605, 0.000202, PTP, rank-7, rank-8, 7_8_-3334_7
+Container, 0, LINK, 0, 0.000605, 0.000605, link0
+Variable, link0, bandwidth, 0.000000, 0.000605, 0.000605, 125000000.000000
+Variable, link0, latency, 0.000000, 0.000605, 0.000605, 0.000100
+Variable, link0, bandwidth_used, 0.000201, 0.000202, 0.000001, 121250001.375000
+Variable, link0, bandwidth_used, 0.000202, 0.000403, 0.000201, 0.000000
+Variable, link0, bandwidth_used, 0.000403, 0.000605, 0.000202, 0.000000
+Variable, link0, bandwidth_used, 0.000605, 0.000605, 0.000000, 0.000000
+Container, 0, HOST, 0, 0.000605, 0.000605, host111
+Variable, host111, power, 0.000000, 0.000605, 0.000605, 5000000000.000000
+Variable, host111, power_used, 0.000000, 0.000605, 0.000605, 0.000000
+Variable, host111, power_used, 0.000605, 0.000605, 0.000000, 0.000000
+Container, 0, HOST, 0, 0.000605, 0.000605, host110
+Variable, host110, power, 0.000000, 0.000605, 0.000605, 5000000000.000000
+Variable, host110, power_used, 0.000000, 0.000403, 0.000403, 0.000000
+Variable, host110, power_used, 0.000403, 0.000605, 0.000202, 0.000000
+Container, 0, HOST, 0, 0.000605, 0.000605, host101
+Variable, host101, power, 0.000000, 0.000605, 0.000605, 5000000000.000000
+Variable, host101, power_used, 0.000000, 0.000403, 0.000403, 0.000000
+Variable, host101, power_used, 0.000403, 0.000605, 0.000202, 0.000000
+Container, 0, HOST, 0, 0.000605, 0.000605, host100
+Variable, host100, power, 0.000000, 0.000605, 0.000605, 5000000000.000000
+Variable, host100, power_used, 0.000000, 0.000202, 0.000202, 0.000000
+Variable, host100, power_used, 0.000202, 0.000605, 0.000403, 0.000000
+Container, 0, HOST, 0, 0.000605, 0.000605, host011
+Variable, host011, power, 0.000000, 0.000605, 0.000605, 5000000000.000000
+Variable, host011, power_used, 0.000000, 0.000403, 0.000403, 0.000000
+Variable, host011, power_used, 0.000403, 0.000605, 0.000202, 0.000000
+Container, 0, HOST, 0, 0.000605, 0.000605, host010
+Variable, host010, power, 0.000000, 0.000605, 0.000605, 5000000000.000000
+Variable, host010, power_used, 0.000000, 0.000202, 0.000202, 0.000000
+Variable, host010, power_used, 0.000202, 0.000605, 0.000403, 0.000000
+Container, 0, HOST, 0, 0.000605, 0.000605, host001
+Variable, host001, power, 0.000000, 0.000605, 0.000605, 5000000000.000000
+Variable, host001, power_used, 0.000000, 0.000202, 0.000202, 0.000000
+Variable, host001, power_used, 0.000202, 0.000605, 0.000403, 0.000000
+Container, 0, HOST, 0, 0.000605, 0.000605, host000
+Variable, host000, power, 0.000000, 0.000605, 0.000605, 5000000000.000000
+Variable, host000, power_used, 0.000000, 0.000605, 0.000605, 0.000000
+Container, 0, MPI, 0, 0.000605, 0.000605, rank-8
+State, rank-8, MPI_STATE, 0.000000, 0.000000, 0.000000, 0.000000, PMPI_Init
+State, rank-8, MPI_STATE, 0.000000, 0.000605, 0.000605, 0.000000, PMPI_Bcast
+State, rank-8, MPI_STATE, 0.000605, 0.000605, 0.000000, 0.000000, PMPI_Finalize
+Container, 0, MPI, 0, 0.000605, 0.000605, rank-7
+State, rank-7, MPI_STATE, 0.000000, 0.000000, 0.000000, 0.000000, PMPI_Init
+State, rank-7, MPI_STATE, 0.000000, 0.000403, 0.000403, 0.000000, PMPI_Bcast
+State, rank-7, MPI_STATE, 0.000403, 0.000605, 0.000202, 0.000000, PMPI_Finalize
+Container, 0, MPI, 0, 0.000605, 0.000605, rank-6
+State, rank-6, MPI_STATE, 0.000000, 0.000000, 0.000000, 0.000000, PMPI_Init
+State, rank-6, MPI_STATE, 0.000000, 0.000403, 0.000403, 0.000000, PMPI_Bcast
+State, rank-6, MPI_STATE, 0.000403, 0.000605, 0.000202, 0.000000, PMPI_Finalize
+Container, 0, MPI, 0, 0.000605, 0.000605, rank-5
+State, rank-5, MPI_STATE, 0.000000, 0.000000, 0.000000, 0.000000, PMPI_Init
+State, rank-5, MPI_STATE, 0.000000, 0.000202, 0.000202, 0.000000, PMPI_Bcast
+State, rank-5, MPI_STATE, 0.000202, 0.000605, 0.000403, 0.000000, PMPI_Finalize
+Container, 0, MPI, 0, 0.000605, 0.000605, rank-4
+State, rank-4, MPI_STATE, 0.000000, 0.000000, 0.000000, 0.000000, PMPI_Init
+State, rank-4, MPI_STATE, 0.000000, 0.000403, 0.000403, 0.000000, PMPI_Bcast
+State, rank-4, MPI_STATE, 0.000403, 0.000605, 0.000202, 0.000000, PMPI_Finalize
+Container, 0, MPI, 0, 0.000605, 0.000605, rank-3
+State, rank-3, MPI_STATE, 0.000000, 0.000000, 0.000000, 0.000000, PMPI_Init
+State, rank-3, MPI_STATE, 0.000000, 0.000202, 0.000202, 0.000000, PMPI_Bcast
+State, rank-3, MPI_STATE, 0.000202, 0.000605, 0.000403, 0.000000, PMPI_Finalize
+Container, 0, MPI, 0, 0.000605, 0.000605, rank-2
+State, rank-2, MPI_STATE, 0.000000, 0.000000, 0.000000, 0.000000, PMPI_Init
+State, rank-2, MPI_STATE, 0.000000, 0.000202, 0.000202, 0.000000, PMPI_Bcast
+State, rank-2, MPI_STATE, 0.000202, 0.000605, 0.000403, 0.000000, PMPI_Finalize
+Container, 0, MPI, 0, 0.000605, 0.000605, rank-1
+State, rank-1, MPI_STATE, 0.000000, 0.000000, 0.000000, 0.000000, PMPI_Init
+State, rank-1, MPI_STATE, 0.000000, 0.000000, 0.000000, 0.000000, PMPI_Bcast
+State, rank-1, MPI_STATE, 0.000000, 0.000605, 0.000605, 0.000000, PMPI_Finalize

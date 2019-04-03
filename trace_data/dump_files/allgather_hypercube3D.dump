@@ -1,0 +1,208 @@
+Container, 0, 0, 0, 0.001505, 0.001505, 0
+Link, 0, 0-LINK9-HOST6, 0.000000, 0.000000, 0.000000, topology, link0, host001, 0
+Link, 0, 0-LINK9-HOST6, 0.000000, 0.000000, 0.000000, topology, link0, host010, 1
+Link, 0, 0-LINK9-HOST6, 0.000000, 0.000000, 0.000000, topology, link0, host011, 2
+Link, 0, 0-LINK9-HOST6, 0.000000, 0.000000, 0.000000, topology, link0, host100, 3
+Link, 0, 0-LINK9-HOST6, 0.000000, 0.000000, 0.000000, topology, link0, host101, 4
+Link, 0, 0-LINK9-HOST6, 0.000000, 0.000000, 0.000000, topology, link0, host110, 5
+Link, 0, 0-LINK9-HOST6, 0.000000, 0.000000, 0.000000, topology, link0, host111, 6
+Link, 0, 0-HOST6-LINK9, 0.000000, 0.000000, 0.000000, topology, host000, link0, 7
+Link, 0, 0-LINK9-LINK9, 0.000000, 0.000000, 0.000000, topology, link0, link0, 8
+Link, 0, MPI_LINK, 0.000000, 0.000100, 0.000100, PTP, rank-1, rank-5, 1_5_-223_4
+Link, 0, MPI_LINK, 0.000000, 0.000100, 0.000100, PTP, rank-1, rank-3, 1_3_-223_2
+Link, 0, MPI_LINK, 0.000000, 0.000100, 0.000100, PTP, rank-1, rank-2, 1_2_-223_1
+Link, 0, MPI_LINK, 0.000000, 0.000200, 0.000200, PTP, rank-1, rank-7, 1_7_-223_6
+Link, 0, MPI_LINK, 0.000000, 0.000200, 0.000200, PTP, rank-1, rank-6, 1_6_-223_5
+Link, 0, MPI_LINK, 0.000000, 0.000200, 0.000200, PTP, rank-1, rank-4, 1_4_-223_3
+Link, 0, MPI_LINK, 0.000000, 0.000300, 0.000300, PTP, rank-1, rank-8, 1_8_-223_7
+Link, 0, MPI_LINK, 0.000000, 0.000302, 0.000302, PTP, rank-1, rank-5, 1_5_-556_11
+Link, 0, MPI_LINK, 0.000000, 0.000302, 0.000302, PTP, rank-1, rank-3, 1_3_-556_9
+Link, 0, MPI_LINK, 0.000000, 0.000302, 0.000302, PTP, rank-1, rank-2, 1_2_-556_8
+Link, 0, MPI_LINK, 0.000100, 0.000302, 0.000202, PTP, rank-5, rank-1, 5_1_-556_17
+Link, 0, MPI_LINK, 0.000100, 0.000302, 0.000202, PTP, rank-2, rank-1, 2_1_-556_15
+Link, 0, MPI_LINK, 0.000100, 0.000302, 0.000202, PTP, rank-3, rank-1, 3_1_-556_16
+Link, 0, MPI_LINK, 0.000100, 0.000402, 0.000302, PTP, rank-5, rank-7, 5_7_-556_32
+Link, 0, MPI_LINK, 0.000100, 0.000402, 0.000302, PTP, rank-5, rank-6, 5_6_-556_29
+Link, 0, MPI_LINK, 0.000200, 0.000402, 0.000202, PTP, rank-7, rank-5, 7_5_-556_50
+Link, 0, MPI_LINK, 0.000100, 0.000402, 0.000302, PTP, rank-3, rank-4, 3_4_-556_22
+Link, 0, MPI_LINK, 0.000200, 0.000402, 0.000202, PTP, rank-7, rank-3, 7_3_-556_44
+Link, 0, MPI_LINK, 0.000200, 0.000402, 0.000202, PTP, rank-6, rank-2, 6_2_-556_40
+Link, 0, MPI_LINK, 0.000100, 0.000402, 0.000302, PTP, rank-3, rank-7, 3_7_-556_31
+Link, 0, MPI_LINK, 0.000100, 0.000402, 0.000302, PTP, rank-2, rank-6, 2_6_-556_27
+Link, 0, MPI_LINK, 0.000200, 0.000402, 0.000202, PTP, rank-6, rank-5, 6_5_-556_49
+Link, 0, MPI_LINK, 0.000100, 0.000402, 0.000302, PTP, rank-2, rank-4, 2_4_-556_21
+Link, 0, MPI_LINK, 0.000200, 0.000402, 0.000202, PTP, rank-4, rank-3, 4_3_-556_42
+Link, 0, MPI_LINK, 0.000200, 0.000402, 0.000202, PTP, rank-4, rank-2, 4_2_-556_39
+Link, 0, MPI_LINK, 0.000200, 0.000502, 0.000302, PTP, rank-7, rank-8, 7_8_-556_56
+Link, 0, MPI_LINK, 0.000300, 0.000502, 0.000202, PTP, rank-8, rank-7, 8_7_-556_63
+Link, 0, MPI_LINK, 0.000300, 0.000502, 0.000202, PTP, rank-8, rank-6, 8_6_-556_62
+Link, 0, MPI_LINK, 0.000300, 0.000502, 0.000202, PTP, rank-8, rank-4, 8_4_-556_60
+Link, 0, MPI_LINK, 0.000200, 0.000502, 0.000302, PTP, rank-4, rank-8, 4_8_-556_54
+Link, 0, MPI_LINK, 0.000200, 0.000502, 0.000302, PTP, rank-6, rank-8, 6_8_-556_55
+Link, 0, MPI_LINK, 0.000100, 0.000503, 0.000403, PTP, rank-5, rank-3, 5_3_-556_23
+Link, 0, MPI_LINK, 0.000100, 0.000503, 0.000403, PTP, rank-5, rank-2, 5_2_-556_20
+Link, 0, MPI_LINK, 0.000100, 0.000503, 0.000403, PTP, rank-3, rank-5, 3_5_-556_25
+Link, 0, MPI_LINK, 0.000100, 0.000503, 0.000403, PTP, rank-2, rank-3, 2_3_-556_18
+Link, 0, MPI_LINK, 0.000100, 0.000503, 0.000403, PTP, rank-3, rank-2, 3_2_-556_19
+Link, 0, MPI_LINK, 0.000100, 0.000503, 0.000403, PTP, rank-2, rank-5, 2_5_-556_24
+Link, 0, MPI_LINK, 0.000200, 0.000604, 0.000404, PTP, rank-6, rank-7, 6_7_-556_52
+Link, 0, MPI_LINK, 0.000200, 0.000604, 0.000404, PTP, rank-7, rank-6, 7_6_-556_53
+Link, 0, MPI_LINK, 0.000200, 0.000604, 0.000404, PTP, rank-7, rank-4, 7_4_-556_47
+Link, 0, MPI_LINK, 0.000200, 0.000604, 0.000404, PTP, rank-7, rank-1, 7_1_-556_38
+Link, 0, MPI_LINK, 0.000000, 0.000604, 0.000604, PTP, rank-1, rank-7, 1_7_-556_13
+Link, 0, MPI_LINK, 0.000000, 0.000604, 0.000604, PTP, rank-1, rank-6, 1_6_-556_12
+Link, 0, MPI_LINK, 0.000000, 0.000604, 0.000604, PTP, rank-1, rank-4, 1_4_-556_10
+Link, 0, MPI_LINK, 0.000200, 0.000604, 0.000404, PTP, rank-4, rank-1, 4_1_-556_36
+Link, 0, MPI_LINK, 0.000200, 0.000604, 0.000404, PTP, rank-4, rank-7, 4_7_-556_51
+Link, 0, MPI_LINK, 0.000200, 0.000604, 0.000404, PTP, rank-4, rank-6, 4_6_-556_48
+Link, 0, MPI_LINK, 0.000200, 0.000604, 0.000404, PTP, rank-6, rank-4, 6_4_-556_46
+Link, 0, MPI_LINK, 0.000200, 0.000604, 0.000404, PTP, rank-6, rank-1, 6_1_-556_37
+Link, 0, MPI_LINK, 0.000100, 0.000703, 0.000603, PTP, rank-5, rank-8, 5_8_-556_35
+Link, 0, MPI_LINK, 0.000300, 0.000703, 0.000403, PTP, rank-8, rank-5, 8_5_-556_61
+Link, 0, MPI_LINK, 0.000300, 0.000703, 0.000403, PTP, rank-8, rank-3, 8_3_-556_59
+Link, 0, MPI_LINK, 0.000300, 0.000703, 0.000403, PTP, rank-8, rank-2, 8_2_-556_58
+Link, 0, MPI_LINK, 0.000100, 0.000703, 0.000603, PTP, rank-2, rank-8, 2_8_-556_33
+Link, 0, MPI_LINK, 0.000100, 0.000703, 0.000603, PTP, rank-3, rank-8, 3_8_-556_34
+Link, 0, MPI_LINK, 0.000100, 0.000805, 0.000705, PTP, rank-5, rank-4, 5_4_-556_26
+Link, 0, MPI_LINK, 0.000200, 0.000805, 0.000605, PTP, rank-4, rank-5, 4_5_-556_45
+Link, 0, MPI_LINK, 0.000100, 0.000805, 0.000705, PTP, rank-3, rank-6, 3_6_-556_28
+Link, 0, MPI_LINK, 0.000200, 0.000805, 0.000605, PTP, rank-6, rank-3, 6_3_-556_43
+Link, 0, MPI_LINK, 0.000100, 0.000805, 0.000705, PTP, rank-2, rank-7, 2_7_-556_30
+Link, 0, MPI_LINK, 0.000200, 0.000805, 0.000605, PTP, rank-7, rank-2, 7_2_-556_41
+Link, 0, MPI_LINK, 0.000000, 0.000905, 0.000905, PTP, rank-1, rank-8, 1_8_-556_14
+Link, 0, MPI_LINK, 0.000300, 0.000905, 0.000605, PTP, rank-8, rank-1, 8_1_-556_57
+Link, 0, MPI_LINK, 0.000805, 0.001005, 0.000200, PTP, rank-5, rank-1, 5_1_-778_68
+Link, 0, MPI_LINK, 0.000805, 0.001005, 0.000200, PTP, rank-2, rank-1, 2_1_-778_64
+Link, 0, MPI_LINK, 0.000805, 0.001005, 0.000200, PTP, rank-3, rank-1, 3_1_-778_65
+Link, 0, MPI_LINK, 0.000805, 0.001105, 0.000300, PTP, rank-4, rank-1, 4_1_-778_69
+Link, 0, MPI_LINK, 0.000805, 0.001105, 0.000300, PTP, rank-6, rank-1, 6_1_-778_66
+Link, 0, MPI_LINK, 0.000805, 0.001105, 0.000300, PTP, rank-7, rank-1, 7_1_-778_67
+Link, 0, MPI_LINK, 0.000905, 0.001205, 0.000300, PTP, rank-8, rank-1, 8_1_-778_70
+Link, 0, MPI_LINK, 0.001205, 0.001305, 0.000100, PTP, rank-1, rank-5, 1_5_-778_74
+Link, 0, MPI_LINK, 0.001205, 0.001305, 0.000100, PTP, rank-1, rank-3, 1_3_-778_72
+Link, 0, MPI_LINK, 0.001205, 0.001305, 0.000100, PTP, rank-1, rank-2, 1_2_-778_71
+Link, 0, MPI_LINK, 0.001205, 0.001405, 0.000200, PTP, rank-1, rank-7, 1_7_-778_76
+Link, 0, MPI_LINK, 0.001205, 0.001405, 0.000200, PTP, rank-1, rank-6, 1_6_-778_75
+Link, 0, MPI_LINK, 0.001205, 0.001405, 0.000200, PTP, rank-1, rank-4, 1_4_-778_73
+Link, 0, MPI_LINK, 0.001205, 0.001505, 0.000300, PTP, rank-1, rank-8, 1_8_-778_77
+Container, 0, LINK, 0, 0.001505, 0.001505, link0
+Variable, link0, bandwidth, 0.000000, 0.001505, 0.001505, 125000000.000000
+Variable, link0, latency, 0.000000, 0.001505, 0.001505, 0.000100
+Variable, link0, bandwidth_used, 0.000100, 0.000200, 0.000100, 0.000000
+Variable, link0, bandwidth_used, 0.000200, 0.000300, 0.000100, 0.000000
+Variable, link0, bandwidth_used, 0.000300, 0.000301, 0.000001, 0.000000
+Variable, link0, bandwidth_used, 0.000301, 0.000302, 0.000001, 121250001.375000
+Variable, link0, bandwidth_used, 0.000302, 0.000401, 0.000099, 0.000000
+Variable, link0, bandwidth_used, 0.000401, 0.000402, 0.000001, 121250001.375000
+Variable, link0, bandwidth_used, 0.000402, 0.000501, 0.000099, 0.000000
+Variable, link0, bandwidth_used, 0.000501, 0.000502, 0.000001, 121250001.375000
+Variable, link0, bandwidth_used, 0.000502, 0.000503, 0.000001, 0.000000
+Variable, link0, bandwidth_used, 0.000503, 0.000603, 0.000100, 0.000000
+Variable, link0, bandwidth_used, 0.000603, 0.000604, 0.000001, 121250001.375000
+Variable, link0, bandwidth_used, 0.000604, 0.000703, 0.000099, 0.000000
+Variable, link0, bandwidth_used, 0.000703, 0.000804, 0.000101, 0.000000
+Variable, link0, bandwidth_used, 0.000804, 0.000805, 0.000001, 121250001.375000
+Variable, link0, bandwidth_used, 0.000805, 0.000904, 0.000099, 0.000000
+Variable, link0, bandwidth_used, 0.000904, 0.000905, 0.000001, 121250001.375000
+Variable, link0, bandwidth_used, 0.000905, 0.001005, 0.000100, 0.000000
+Variable, link0, bandwidth_used, 0.001005, 0.001105, 0.000100, 0.000000
+Variable, link0, bandwidth_used, 0.001105, 0.001205, 0.000100, 0.000000
+Variable, link0, bandwidth_used, 0.001205, 0.001305, 0.000100, 0.000000
+Variable, link0, bandwidth_used, 0.001305, 0.001405, 0.000100, 0.000000
+Variable, link0, bandwidth_used, 0.001405, 0.001505, 0.000100, 0.000000
+Variable, link0, bandwidth_used, 0.001505, 0.001505, 0.000000, 0.000000
+Container, 0, HOST, 0, 0.001505, 0.001505, host111
+Variable, host111, power, 0.000000, 0.001505, 0.001505, 5000000000.000000
+Variable, host111, power_used, 0.000000, 0.000300, 0.000300, 0.000000
+Variable, host111, power_used, 0.000300, 0.000905, 0.000605, 0.000000
+Variable, host111, power_used, 0.000905, 0.001505, 0.000600, 0.000000
+Variable, host111, power_used, 0.001505, 0.001505, 0.000000, 0.000000
+Container, 0, HOST, 0, 0.001505, 0.001505, host110
+Variable, host110, power, 0.000000, 0.001505, 0.001505, 5000000000.000000
+Variable, host110, power_used, 0.000000, 0.000200, 0.000200, 0.000000
+Variable, host110, power_used, 0.000200, 0.000805, 0.000605, 0.000000
+Variable, host110, power_used, 0.000805, 0.001405, 0.000600, 0.000000
+Variable, host110, power_used, 0.001405, 0.001505, 0.000100, 0.000000
+Container, 0, HOST, 0, 0.001505, 0.001505, host101
+Variable, host101, power, 0.000000, 0.001505, 0.001505, 5000000000.000000
+Variable, host101, power_used, 0.000000, 0.000200, 0.000200, 0.000000
+Variable, host101, power_used, 0.000200, 0.000805, 0.000605, 0.000000
+Variable, host101, power_used, 0.000805, 0.001405, 0.000600, 0.000000
+Variable, host101, power_used, 0.001405, 0.001505, 0.000100, 0.000000
+Container, 0, HOST, 0, 0.001505, 0.001505, host100
+Variable, host100, power, 0.000000, 0.001505, 0.001505, 5000000000.000000
+Variable, host100, power_used, 0.000000, 0.000100, 0.000100, 0.000000
+Variable, host100, power_used, 0.000100, 0.000805, 0.000705, 0.000000
+Variable, host100, power_used, 0.000805, 0.001305, 0.000500, 0.000000
+Variable, host100, power_used, 0.001305, 0.001505, 0.000200, 0.000000
+Container, 0, HOST, 0, 0.001505, 0.001505, host011
+Variable, host011, power, 0.000000, 0.001505, 0.001505, 5000000000.000000
+Variable, host011, power_used, 0.000000, 0.000200, 0.000200, 0.000000
+Variable, host011, power_used, 0.000200, 0.000805, 0.000605, 0.000000
+Variable, host011, power_used, 0.000805, 0.001405, 0.000600, 0.000000
+Variable, host011, power_used, 0.001405, 0.001505, 0.000100, 0.000000
+Container, 0, HOST, 0, 0.001505, 0.001505, host010
+Variable, host010, power, 0.000000, 0.001505, 0.001505, 5000000000.000000
+Variable, host010, power_used, 0.000000, 0.000100, 0.000100, 0.000000
+Variable, host010, power_used, 0.000100, 0.000805, 0.000705, 0.000000
+Variable, host010, power_used, 0.000805, 0.001305, 0.000500, 0.000000
+Variable, host010, power_used, 0.001305, 0.001505, 0.000200, 0.000000
+Container, 0, HOST, 0, 0.001505, 0.001505, host001
+Variable, host001, power, 0.000000, 0.001505, 0.001505, 5000000000.000000
+Variable, host001, power_used, 0.000000, 0.000100, 0.000100, 0.000000
+Variable, host001, power_used, 0.000100, 0.000805, 0.000705, 0.000000
+Variable, host001, power_used, 0.000805, 0.001305, 0.000500, 0.000000
+Variable, host001, power_used, 0.001305, 0.001505, 0.000200, 0.000000
+Container, 0, HOST, 0, 0.001505, 0.001505, host000
+Variable, host000, power, 0.000000, 0.001505, 0.001505, 5000000000.000000
+Variable, host000, power_used, 0.000000, 0.000905, 0.000905, 0.000000
+Variable, host000, power_used, 0.000905, 0.001205, 0.000300, 0.000000
+Variable, host000, power_used, 0.001205, 0.001505, 0.000300, 0.000000
+Container, 0, MPI, 0, 0.001505, 0.001505, rank-8
+State, rank-8, MPI_STATE, 0.000000, 0.000000, 0.000000, 0.000000, PMPI_Init
+State, rank-8, MPI_STATE, 0.000000, 0.000300, 0.000300, 0.000000, PMPI_Scatter
+State, rank-8, MPI_STATE, 0.000300, 0.000905, 0.000605, 0.000000, PMPI_Allgather
+State, rank-8, MPI_STATE, 0.000905, 0.001505, 0.000600, 0.000000, PMPI_Barrier
+State, rank-8, MPI_STATE, 0.001505, 0.001505, 0.000000, 0.000000, PMPI_Finalize
+Container, 0, MPI, 0, 0.001505, 0.001505, rank-7
+State, rank-7, MPI_STATE, 0.000000, 0.000000, 0.000000, 0.000000, PMPI_Init
+State, rank-7, MPI_STATE, 0.000000, 0.000200, 0.000200, 0.000000, PMPI_Scatter
+State, rank-7, MPI_STATE, 0.000200, 0.000805, 0.000605, 0.000000, PMPI_Allgather
+State, rank-7, MPI_STATE, 0.000805, 0.001405, 0.000600, 0.000000, PMPI_Barrier
+State, rank-7, MPI_STATE, 0.001405, 0.001505, 0.000100, 0.000000, PMPI_Finalize
+Container, 0, MPI, 0, 0.001505, 0.001505, rank-6
+State, rank-6, MPI_STATE, 0.000000, 0.000000, 0.000000, 0.000000, PMPI_Init
+State, rank-6, MPI_STATE, 0.000000, 0.000200, 0.000200, 0.000000, PMPI_Scatter
+State, rank-6, MPI_STATE, 0.000200, 0.000805, 0.000605, 0.000000, PMPI_Allgather
+State, rank-6, MPI_STATE, 0.000805, 0.001405, 0.000600, 0.000000, PMPI_Barrier
+State, rank-6, MPI_STATE, 0.001405, 0.001505, 0.000100, 0.000000, PMPI_Finalize
+Container, 0, MPI, 0, 0.001505, 0.001505, rank-5
+State, rank-5, MPI_STATE, 0.000000, 0.000000, 0.000000, 0.000000, PMPI_Init
+State, rank-5, MPI_STATE, 0.000000, 0.000100, 0.000100, 0.000000, PMPI_Scatter
+State, rank-5, MPI_STATE, 0.000100, 0.000805, 0.000705, 0.000000, PMPI_Allgather
+State, rank-5, MPI_STATE, 0.000805, 0.001305, 0.000500, 0.000000, PMPI_Barrier
+State, rank-5, MPI_STATE, 0.001305, 0.001505, 0.000200, 0.000000, PMPI_Finalize
+Container, 0, MPI, 0, 0.001505, 0.001505, rank-4
+State, rank-4, MPI_STATE, 0.000000, 0.000000, 0.000000, 0.000000, PMPI_Init
+State, rank-4, MPI_STATE, 0.000000, 0.000200, 0.000200, 0.000000, PMPI_Scatter
+State, rank-4, MPI_STATE, 0.000200, 0.000805, 0.000605, 0.000000, PMPI_Allgather
+State, rank-4, MPI_STATE, 0.000805, 0.001405, 0.000600, 0.000000, PMPI_Barrier
+State, rank-4, MPI_STATE, 0.001405, 0.001505, 0.000100, 0.000000, PMPI_Finalize
+Container, 0, MPI, 0, 0.001505, 0.001505, rank-3
+State, rank-3, MPI_STATE, 0.000000, 0.000000, 0.000000, 0.000000, PMPI_Init
+State, rank-3, MPI_STATE, 0.000000, 0.000100, 0.000100, 0.000000, PMPI_Scatter
+State, rank-3, MPI_STATE, 0.000100, 0.000805, 0.000705, 0.000000, PMPI_Allgather
+State, rank-3, MPI_STATE, 0.000805, 0.001305, 0.000500, 0.000000, PMPI_Barrier
+State, rank-3, MPI_STATE, 0.001305, 0.001505, 0.000200, 0.000000, PMPI_Finalize
+Container, 0, MPI, 0, 0.001505, 0.001505, rank-2
+State, rank-2, MPI_STATE, 0.000000, 0.000000, 0.000000, 0.000000, PMPI_Init
+State, rank-2, MPI_STATE, 0.000000, 0.000100, 0.000100, 0.000000, PMPI_Scatter
+State, rank-2, MPI_STATE, 0.000100, 0.000805, 0.000705, 0.000000, PMPI_Allgather
+State, rank-2, MPI_STATE, 0.000805, 0.001305, 0.000500, 0.000000, PMPI_Barrier
+State, rank-2, MPI_STATE, 0.001305, 0.001505, 0.000200, 0.000000, PMPI_Finalize
+Container, 0, MPI, 0, 0.001505, 0.001505, rank-1
+State, rank-1, MPI_STATE, 0.000000, 0.000000, 0.000000, 0.000000, PMPI_Init
+State, rank-1, MPI_STATE, 0.000000, 0.000000, 0.000000, 0.000000, PMPI_Scatter
+State, rank-1, MPI_STATE, 0.000000, 0.000905, 0.000905, 0.000000, PMPI_Allgather
+State, rank-1, MPI_STATE, 0.000905, 0.001205, 0.000300, 0.000000, PMPI_Barrier
+State, rank-1, MPI_STATE, 0.001205, 0.001505, 0.000300, 0.000000, PMPI_Finalize

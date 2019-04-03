@@ -1,0 +1,68 @@
+<!-- RING 1D ARCHITECTURE -->
+
+<?xml version='1.0'?>
+<!DOCTYPE platform SYSTEM "http://simgrid.gforge.inria.fr/simgrid/simgrid.dtd">
+<platform version="4.1">
+    <zone id="AS0" routing="Floyd">
+     
+    <host id="host000" speed="5Gf"/>
+    <host id="host001" speed="5Gf"/>
+    <host id="host010" speed="5Gf"/>
+    <host id="host011" speed="5Gf"/>
+    <host id="host100" speed="5Gf"/>
+    <host id="host101" speed="5Gf"/>
+    <host id="host110" speed="5Gf"/>
+    <host id="host111" speed="5Gf"/>
+    
+    <link id="link0" bandwidth="125MBps" latency="100us"/>
+
+    <route src="host000" dst="host001">
+        <link_ctn id="link0"/>
+    </route>
+
+    <route src="host000" dst="host010">
+        <link_ctn id="link0"/>
+    </route>
+
+    <route src="host000" dst="host100">
+        <link_ctn id="link0"/>
+    </route>
+
+    <route src="host010" dst="host110">
+        <link_ctn id="link0"/>
+    </route>
+    
+    <route src="host010" dst="host011">
+        <link_ctn id="link0"/>
+    </route>
+
+    <route src="host110" dst="host111">
+        <link_ctn id="link0"/>
+    </route>
+
+    <route src="host011" dst="host111">
+        <link_ctn id="link0"/>
+    </route>
+
+    <route src="host011" dst="host001">
+        <link_ctn id="link0"/>
+    </route>
+
+    <route src="host110" dst="host100">
+        <link_ctn id="link0"/>
+    </route>
+
+    <route src="host101" dst="host111">
+        <link_ctn id="link0"/>
+    </route>
+
+    <route src="host001" dst="host101">
+        <link_ctn id="link0"/>
+    </route>
+
+    <route src="host100" dst="host101">
+        <link_ctn id="link0"/>
+    </route>
+
+  </zone>
+</platform>

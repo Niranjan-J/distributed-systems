@@ -10,9 +10,6 @@ int main(int argc, char **argv) {
   MPI_Init(&argc, &argv);
   MPI_Comm_rank(MPI_COMM_WORLD, &rank); 
   
-  TRACE_link_variable_declare("link");
-  TRACE_category_with_color("all","0.7 0.7 0.7");
-  
   if (rank == 0) {    
       printf("Enter a number to broadcast:\n");
 	    // scanf("%d", &value);

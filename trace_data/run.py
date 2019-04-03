@@ -16,8 +16,8 @@ for imp_name,imp_file in implementation.items() :
     for plat_name,plat_file in platforms.items() :
         subprocess.run(["smpicc", "-O4", imp_file], capture_output=True)
 
-        trace_filename = imp_name + "_" + plat_name + ".trace"
-        dump_filename = imp_name + "_" + plat_name + ".dump"
+        trace_filename = "trace_files/" + imp_name + "_" + plat_name + ".trace"
+        dump_filename = "dump_files/" + imp_name + "_" + plat_name + ".dump"
 
         compile_proc = subprocess.run(["smpicc", "-O4", imp_file], capture_output=True)
         simulate_proc = subprocess.run(["smpirun",

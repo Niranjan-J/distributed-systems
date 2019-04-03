@@ -1,5 +1,5 @@
 #This file was generated using SimGrid-3.20.0
-#[./a.out --cfg=smpi/privatization:1 --cfg=surf/precision:1e-9 --cfg=network/model:SMPI --cfg=tracing:yes --cfg=tracing/smpi:yes --cfg=tracing/smpi/internals:yes --cfg=tracing/filename:bcast_ring.trace ../platforms/ring/config.xml smpitmp-appK1VK7G ]
+#[./a.out --cfg=smpi/privatization:1 --cfg=surf/precision:1e-9 --cfg=network/model:SMPI --cfg=tracing:yes --cfg=tracing/smpi:yes --cfg=tracing/smpi/internals:yes --cfg=tracing/filename:trace_files/bcast_ring.trace ../platforms/ring/config.xml smpitmp-appxet3IA ]
 %EventDef PajeDefineContainerType 0
 %       Alias string
 %       Type string
@@ -140,10 +140,10 @@
 13 0.000000 2 8
 5 7 2 PMPI_Bcast "0 0.78 0.39"
 5 8 2 PMPI_Finalize "0 1 0"
-12 0.000000 2 8 7
-12 0.000000 2 5 7
-12 0.000000 2 7 7
 12 0.000000 2 6 7
+12 0.000000 2 7 7
+12 0.000000 2 5 7
+12 0.000000 2 8 7
 12 0.000000 2 4 7
 12 0.000000 2 3 7
 12 0.000000 2 2 7

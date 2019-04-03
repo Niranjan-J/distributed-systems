@@ -6,11 +6,21 @@ platforms = {
     "ring" : "../platforms/ring/config.xml",
     "hypercube2D" : "../platforms/hypercube-2d/config.xml",
     "hypercube3D" : "../platforms/hypercube-3d/config.xml",
+    "torus" : "../platforms/torus/config.xml",
+    "hierarchial" : "../platforms/hierarchial/config.xml",
+    "ccgraph" : "../platforms/ccgraph/config.xml",
+    "mesh" : "../platforms/mesh/config.xml",
+    "linear" : "../platforms/linear/config.xml",
 }
 hostfiles = {
     "ring" : "../platforms/ring/hostfile.txt",
     "hypercube2D" : "../platforms/hypercube-2d/hostfile.txt",
     "hypercube3D" : "../platforms/hypercube-3d/hostfile.txt",
+    "torus" : "../platforms/torus/hostfile.txt",
+    "hierarchial" : "../platforms/hierarchial/hostfile.txt",
+    "ccgraph" : "../platforms/ccgraph/hostfile.txt",
+    "mesh" : "../platforms/mesh/hostfile.txt",
+    "linear" : "../platforms/linear/hostfile.txt",
 }
 implementation = {
     "bcast" : "../implementation/bcast.c",

@@ -8,8 +8,8 @@ Link, 0, MPI_LINK, 0.000000, 0.000202, 0.000202, PTP, rank-4, rank-1, 4_1_-112_1
 Link, 0, MPI_LINK, 0.000000, 0.000202, 0.000202, PTP, rank-2, rank-1, 2_1_-112_3
 Link, 0, MPI_LINK, 0.000000, 0.000403, 0.000403, PTP, rank-3, rank-1, 3_1_-112_2
 Link, 0, MPI_LINK, 0.000000, 0.000503, 0.000503, PTP, rank-4, rank-1, 4_1_-778_6
-Link, 0, MPI_LINK, 0.000000, 0.000503, 0.000503, PTP, rank-2, rank-1, 2_1_-778_5
-Link, 0, MPI_LINK, 0.000000, 0.000603, 0.000603, PTP, rank-3, rank-1, 3_1_-778_4
+Link, 0, MPI_LINK, 0.000000, 0.000503, 0.000503, PTP, rank-2, rank-1, 2_1_-778_4
+Link, 0, MPI_LINK, 0.000000, 0.000603, 0.000603, PTP, rank-3, rank-1, 3_1_-778_5
 Link, 0, MPI_LINK, 0.000603, 0.000703, 0.000100, PTP, rank-1, rank-4, 1_4_-778_9
 Link, 0, MPI_LINK, 0.000603, 0.000703, 0.000100, PTP, rank-1, rank-2, 1_2_-778_7
 Link, 0, MPI_LINK, 0.000603, 0.000803, 0.000200, PTP, rank-1, rank-3, 1_3_-778_8

@@ -1,0 +1,116 @@
+Container, 0, 0, 0, 0.000807, 0.000807, 0
+Link, 0, 0-LINK9-HOST6, 0.000000, 0.000000, 0.000000, topology, link0, host1, 0
+Link, 0, 0-LINK9-HOST6, 0.000000, 0.000000, 0.000000, topology, link0, host2, 1
+Link, 0, 0-LINK9-HOST6, 0.000000, 0.000000, 0.000000, topology, link0, host3, 2
+Link, 0, 0-LINK9-HOST6, 0.000000, 0.000000, 0.000000, topology, link0, host4, 3
+Link, 0, 0-LINK9-HOST6, 0.000000, 0.000000, 0.000000, topology, link0, host5, 4
+Link, 0, 0-LINK9-HOST6, 0.000000, 0.000000, 0.000000, topology, link0, host6, 5
+Link, 0, 0-LINK9-HOST6, 0.000000, 0.000000, 0.000000, topology, link0, host7, 6
+Link, 0, 0-LINK9-HOST6, 0.000000, 0.000000, 0.000000, topology, link0, host8, 7
+Link, 0, 0-HOST6-LINK9, 0.000000, 0.000000, 0.000000, topology, host0, link0, 8
+Link, 0, 0-LINK9-LINK9, 0.000000, 0.000000, 0.000000, topology, link0, link0, 9
+Link, 0, MPI_LINK, 0.000000, 0.000202, 0.000202, PTP, rank-1, rank-7, 1_7_-223_6
+Link, 0, MPI_LINK, 0.000000, 0.000202, 0.000202, PTP, rank-1, rank-4, 1_4_-223_3
+Link, 0, MPI_LINK, 0.000000, 0.000202, 0.000202, PTP, rank-1, rank-3, 1_3_-223_2
+Link, 0, MPI_LINK, 0.000000, 0.000202, 0.000202, PTP, rank-1, rank-2, 1_2_-223_1
+Link, 0, MPI_LINK, 0.000000, 0.000403, 0.000403, PTP, rank-1, rank-9, 1_9_-223_8
+Link, 0, MPI_LINK, 0.000000, 0.000403, 0.000403, PTP, rank-1, rank-8, 1_8_-223_7
+Link, 0, MPI_LINK, 0.000000, 0.000403, 0.000403, PTP, rank-1, rank-6, 1_6_-223_5
+Link, 0, MPI_LINK, 0.000000, 0.000403, 0.000403, PTP, rank-1, rank-5, 1_5_-223_4
+Link, 0, MPI_LINK, 0.000202, 0.000403, 0.000201, PTP, rank-7, rank-1, 7_1_-445_12
+Link, 0, MPI_LINK, 0.000202, 0.000403, 0.000201, PTP, rank-2, rank-1, 2_1_-445_9
+Link, 0, MPI_LINK, 0.000202, 0.000403, 0.000201, PTP, rank-3, rank-1, 3_1_-445_10
+Link, 0, MPI_LINK, 0.000202, 0.000403, 0.000201, PTP, rank-4, rank-1, 4_1_-445_11
+Link, 0, MPI_LINK, 0.000403, 0.000807, 0.000404, PTP, rank-9, rank-1, 9_1_-445_16
+Link, 0, MPI_LINK, 0.000403, 0.000807, 0.000404, PTP, rank-5, rank-1, 5_1_-445_13
+Link, 0, MPI_LINK, 0.000403, 0.000807, 0.000404, PTP, rank-6, rank-1, 6_1_-445_14
+Link, 0, MPI_LINK, 0.000403, 0.000807, 0.000404, PTP, rank-8, rank-1, 8_1_-445_15
+Container, 0, LINK, 0, 0.000807, 0.000807, link0
+Variable, link0, bandwidth, 0.000000, 0.000807, 0.000807, 125000000.000000
+Variable, link0, latency, 0.000000, 0.000807, 0.000807, 0.000100
+Variable, link0, bandwidth_used, 0.000201, 0.000202, 0.000001, 121250001.500000
+Variable, link0, bandwidth_used, 0.000202, 0.000403, 0.000201, 0.000000
+Variable, link0, bandwidth_used, 0.000403, 0.000806, 0.000403, 0.000000
+Variable, link0, bandwidth_used, 0.000806, 0.000807, 0.000001, 121250001.500000
+Variable, link0, bandwidth_used, 0.000807, 0.000807, 0.000000, 0.000000
+Container, 0, HOST, 0, 0.000807, 0.000807, host8
+Variable, host8, power, 0.000000, 0.000807, 0.000807, 5000000000.000000
+Variable, host8, power_used, 0.000000, 0.000403, 0.000403, 0.000000
+Variable, host8, power_used, 0.000403, 0.000807, 0.000404, 0.000000
+Container, 0, HOST, 0, 0.000807, 0.000807, host7
+Variable, host7, power, 0.000000, 0.000807, 0.000807, 5000000000.000000
+Variable, host7, power_used, 0.000000, 0.000403, 0.000403, 0.000000
+Variable, host7, power_used, 0.000403, 0.000807, 0.000404, 0.000000
+Container, 0, HOST, 0, 0.000807, 0.000807, host6
+Variable, host6, power, 0.000000, 0.000807, 0.000807, 5000000000.000000
+Variable, host6, power_used, 0.000000, 0.000202, 0.000202, 0.000000
+Variable, host6, power_used, 0.000202, 0.000807, 0.000605, 0.000000
+Container, 0, HOST, 0, 0.000807, 0.000807, host5
+Variable, host5, power, 0.000000, 0.000807, 0.000807, 5000000000.000000
+Variable, host5, power_used, 0.000000, 0.000403, 0.000403, 0.000000
+Variable, host5, power_used, 0.000403, 0.000807, 0.000404, 0.000000
+Container, 0, HOST, 0, 0.000807, 0.000807, host4
+Variable, host4, power, 0.000000, 0.000807, 0.000807, 5000000000.000000
+Variable, host4, power_used, 0.000000, 0.000403, 0.000403, 0.000000
+Variable, host4, power_used, 0.000403, 0.000807, 0.000404, 0.000000
+Container, 0, HOST, 0, 0.000807, 0.000807, host3
+Variable, host3, power, 0.000000, 0.000807, 0.000807, 5000000000.000000
+Variable, host3, power_used, 0.000000, 0.000202, 0.000202, 0.000000
+Variable, host3, power_used, 0.000202, 0.000807, 0.000605, 0.000000
+Container, 0, HOST, 0, 0.000807, 0.000807, host2
+Variable, host2, power, 0.000000, 0.000807, 0.000807, 5000000000.000000
+Variable, host2, power_used, 0.000000, 0.000202, 0.000202, 0.000000
+Variable, host2, power_used, 0.000202, 0.000807, 0.000605, 0.000000
+Container, 0, HOST, 0, 0.000807, 0.000807, host1
+Variable, host1, power, 0.000000, 0.000807, 0.000807, 5000000000.000000
+Variable, host1, power_used, 0.000000, 0.000202, 0.000202, 0.000000
+Variable, host1, power_used, 0.000202, 0.000807, 0.000605, 0.000000
+Container, 0, HOST, 0, 0.000807, 0.000807, host0
+Variable, host0, power, 0.000000, 0.000807, 0.000807, 5000000000.000000
+Variable, host0, power_used, 0.000000, 0.000807, 0.000807, 0.000000
+Variable, host0, power_used, 0.000807, 0.000807, 0.000000, 0.000000
+Container, 0, MPI, 0, 0.000807, 0.000807, rank-9
+State, rank-9, MPI_STATE, 0.000000, 0.000000, 0.000000, 0.000000, PMPI_Init
+State, rank-9, MPI_STATE, 0.000000, 0.000403, 0.000403, 0.000000, PMPI_Scatter
+State, rank-9, MPI_STATE, 0.000403, 0.000403, 0.000000, 0.000000, PMPI_Gather
+State, rank-9, MPI_STATE, 0.000403, 0.000807, 0.000404, 0.000000, PMPI_Finalize
+Container, 0, MPI, 0, 0.000807, 0.000807, rank-8
+State, rank-8, MPI_STATE, 0.000000, 0.000000, 0.000000, 0.000000, PMPI_Init
+State, rank-8, MPI_STATE, 0.000000, 0.000403, 0.000403, 0.000000, PMPI_Scatter
+State, rank-8, MPI_STATE, 0.000403, 0.000403, 0.000000, 0.000000, PMPI_Gather
+State, rank-8, MPI_STATE, 0.000403, 0.000807, 0.000404, 0.000000, PMPI_Finalize
+Container, 0, MPI, 0, 0.000807, 0.000807, rank-7
+State, rank-7, MPI_STATE, 0.000000, 0.000000, 0.000000, 0.000000, PMPI_Init
+State, rank-7, MPI_STATE, 0.000000, 0.000202, 0.000202, 0.000000, PMPI_Scatter
+State, rank-7, MPI_STATE, 0.000202, 0.000202, 0.000000, 0.000000, PMPI_Gather
+State, rank-7, MPI_STATE, 0.000202, 0.000807, 0.000605, 0.000000, PMPI_Finalize
+Container, 0, MPI, 0, 0.000807, 0.000807, rank-6
+State, rank-6, MPI_STATE, 0.000000, 0.000000, 0.000000, 0.000000, PMPI_Init
+State, rank-6, MPI_STATE, 0.000000, 0.000403, 0.000403, 0.000000, PMPI_Scatter
+State, rank-6, MPI_STATE, 0.000403, 0.000403, 0.000000, 0.000000, PMPI_Gather
+State, rank-6, MPI_STATE, 0.000403, 0.000807, 0.000404, 0.000000, PMPI_Finalize
+Container, 0, MPI, 0, 0.000807, 0.000807, rank-5
+State, rank-5, MPI_STATE, 0.000000, 0.000000, 0.000000, 0.000000, PMPI_Init
+State, rank-5, MPI_STATE, 0.000000, 0.000403, 0.000403, 0.000000, PMPI_Scatter
+State, rank-5, MPI_STATE, 0.000403, 0.000403, 0.000000, 0.000000, PMPI_Gather
+State, rank-5, MPI_STATE, 0.000403, 0.000807, 0.000404, 0.000000, PMPI_Finalize
+Container, 0, MPI, 0, 0.000807, 0.000807, rank-4
+State, rank-4, MPI_STATE, 0.000000, 0.000000, 0.000000, 0.000000, PMPI_Init
+State, rank-4, MPI_STATE, 0.000000, 0.000202, 0.000202, 0.000000, PMPI_Scatter
+State, rank-4, MPI_STATE, 0.000202, 0.000202, 0.000000, 0.000000, PMPI_Gather
+State, rank-4, MPI_STATE, 0.000202, 0.000807, 0.000605, 0.000000, PMPI_Finalize
+Container, 0, MPI, 0, 0.000807, 0.000807, rank-3
+State, rank-3, MPI_STATE, 0.000000, 0.000000, 0.000000, 0.000000, PMPI_Init
+State, rank-3, MPI_STATE, 0.000000, 0.000202, 0.000202, 0.000000, PMPI_Scatter
+State, rank-3, MPI_STATE, 0.000202, 0.000202, 0.000000, 0.000000, PMPI_Gather
+State, rank-3, MPI_STATE, 0.000202, 0.000807, 0.000605, 0.000000, PMPI_Finalize
+Container, 0, MPI, 0, 0.000807, 0.000807, rank-2
+State, rank-2, MPI_STATE, 0.000000, 0.000000, 0.000000, 0.000000, PMPI_Init
+State, rank-2, MPI_STATE, 0.000000, 0.000202, 0.000202, 0.000000, PMPI_Scatter
+State, rank-2, MPI_STATE, 0.000202, 0.000202, 0.000000, 0.000000, PMPI_Gather
+State, rank-2, MPI_STATE, 0.000202, 0.000807, 0.000605, 0.000000, PMPI_Finalize
+Container, 0, MPI, 0, 0.000807, 0.000807, rank-1
+State, rank-1, MPI_STATE, 0.000000, 0.000000, 0.000000, 0.000000, PMPI_Init
+State, rank-1, MPI_STATE, 0.000000, 0.000000, 0.000000, 0.000000, PMPI_Scatter
+State, rank-1, MPI_STATE, 0.000000, 0.000807, 0.000807, 0.000000, PMPI_Gather
+State, rank-1, MPI_STATE, 0.000807, 0.000807, 0.000000, 0.000000, PMPI_Finalize

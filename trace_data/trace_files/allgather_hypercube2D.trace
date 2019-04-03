@@ -1,5 +1,5 @@
 #This file was generated using SimGrid-3.20.0
-#[./a.out --cfg=smpi/privatization:1 --cfg=surf/precision:1e-9 --cfg=network/model:SMPI --cfg=tracing:yes --cfg=tracing/smpi:yes --cfg=tracing/smpi/internals:yes --cfg=tracing/uncategorized:yes --cfg=tracing/filename:trace_files/allgather_hypercube2D.trace ../platforms/hypercube-2d/config.xml smpitmp-app1yR4mN ]
+#[./a.out --cfg=smpi/privatization:1 --cfg=surf/precision:1e-9 --cfg=network/model:SMPI --cfg=tracing:yes --cfg=tracing/smpi:yes --cfg=tracing/smpi/internals:yes --cfg=tracing/uncategorized:yes --cfg=tracing/filename:trace_files/allgather_hypercube2D.trace ../platforms/hypercube-2d/config.xml smpitmp-appy7VuaL ]
 %EventDef PajeDefineContainerType 0
 %       Alias string
 %       Type string
@@ -159,10 +159,10 @@
 13 0.000000 2 9
 8 0.000000 8 4 0.000000
 9 0.000000 8 4 5000000000.000000
-8 0.000000 8 2 0.000000
-9 0.000000 8 2 5000000000.000000
 8 0.000000 8 3 0.000000
 9 0.000000 8 3 5000000000.000000
+8 0.000000 8 2 0.000000
+9 0.000000 8 2 5000000000.000000
 8 0.000000 8 1 0.000000
 9 0.000000 8 1 5000000000.000000
 5 17 2 PMPI_Scatter "1 0.74 0.54"
@@ -170,12 +170,12 @@
 5 19 2 PMPI_Barrier "0 0.78 0.78"
 5 20 2 PMPI_Finalize "0 1 0"
 10 0.000000 8 4 5000000000.000000
-10 0.000000 8 2 5000000000.000000
 10 0.000000 8 3 5000000000.000000
+10 0.000000 8 2 5000000000.000000
 10 0.000000 8 1 5000000000.000000
 12 0.000000 2 9 17
-12 0.000000 2 7 17
 12 0.000000 2 8 17
+12 0.000000 2 7 17
 12 0.000000 2 6 17
 15 0.000000 3 0 PTP 6 1_2_-223_1
 15 0.000000 3 0 PTP 6 1_3_-223_2

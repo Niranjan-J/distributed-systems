@@ -4,8 +4,8 @@ Link, 0, 0-LINK9-HOST6, 0.000000, 0.000000, 0.000000, topology, link0, host2, 1
 Link, 0, 0-LINK9-HOST6, 0.000000, 0.000000, 0.000000, topology, link0, host3, 2
 Link, 0, 0-HOST6-LINK9, 0.000000, 0.000000, 0.000000, topology, host0, link0, 3
 Link, 0, 0-LINK9-LINK9, 0.000000, 0.000000, 0.000000, topology, link0, link0, 4
-Link, 0, MPI_LINK, 0.000000, 0.000202, 0.000202, PTP, rank-4, rank-1, 4_1_-112_3
-Link, 0, MPI_LINK, 0.000000, 0.000202, 0.000202, PTP, rank-2, rank-1, 2_1_-112_1
+Link, 0, MPI_LINK, 0.000000, 0.000202, 0.000202, PTP, rank-4, rank-1, 4_1_-112_1
+Link, 0, MPI_LINK, 0.000000, 0.000202, 0.000202, PTP, rank-2, rank-1, 2_1_-112_3
 Link, 0, MPI_LINK, 0.000000, 0.000403, 0.000403, PTP, rank-3, rank-1, 3_1_-112_2
 Link, 0, MPI_LINK, 0.000403, 0.000605, 0.000202, PTP, rank-1, rank-4, 1_4_-334_6
 Link, 0, MPI_LINK, 0.000403, 0.000605, 0.000202, PTP, rank-1, rank-2, 1_2_-334_4

@@ -1,5 +1,6 @@
 #!/usr/bin/python
 import csv
+import os
 
 def find_headers(lines) :
     host_headers = ['host']
@@ -10,7 +11,7 @@ def find_headers(lines) :
     return host_headers
 
 def print_data(file_name) :
-    f = open("./dump_files/file_name.dump", "r")
+    f = open("./dump_files/" + file_name + ".dump", "r")
     lines = f.readlines()
             
     links_data = [['source', 'dest', 'hopcount']]
@@ -49,11 +50,16 @@ def print_data(file_name) :
             t.append(hosts_map[x][y])
         hosts_data.append(t)
 
-    with open('./csv/link_data/file_name.csv', 'w') as csvFile:
+    with open('./csv/link_data/' + file_name + '.csv', 'w') as csvFile:
         writer = csv.writer(csvFile)
         writer.writerows(links_data)
 
-    with open('./csv/host_data/file_name.csv', 'w') as csvFile:
+    with open('./csv/host_data/' + file_name + '.csv', 'w') as csvFile:
         writer = csv.writer(csvFile)
         writer.writerows(hosts_data)
     f.close()
+
+
+for filename in os.listdir("./dump_files/"):
+    filename = (filename[0:-5])
+    print_data(filename)

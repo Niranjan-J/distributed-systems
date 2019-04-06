@@ -1,5 +1,5 @@
 #This file was generated using SimGrid-3.20.0
-#[./a.out --cfg=smpi/privatization:1 --cfg=surf/precision:1e-9 --cfg=network/model:SMPI --cfg=tracing:yes --cfg=tracing/smpi:yes --cfg=tracing/smpi/internals:yes --cfg=tracing/uncategorized:yes --cfg=tracing/filename:trace_files/bcast_hypercube2D.trace ../platforms/hypercube-2d/config.xml smpitmp-apptpuV66 ]
+#[./a.out --cfg=smpi/privatization:1 --cfg=surf/precision:1e-9 --cfg=network/model:SMPI --cfg=tracing:yes --cfg=tracing/smpi:yes --cfg=tracing/smpi/internals:yes --cfg=tracing/uncategorized:yes --cfg=tracing/filename:trace_files/bcast_hypercube2D.trace ../platforms/hypercube-2d/config.xml smpitmp-appcofgdz ]
 %EventDef PajeDefineContainerType 0
 %       Alias string
 %       Type string

@@ -6,3 +6,4 @@ host4
 host5
 host6
 host7
+host8

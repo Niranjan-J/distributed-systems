@@ -1,7 +1,9 @@
 #!/usr/bin/python
 
 import subprocess
+import os
 import csv
+import  matplotlib.pyplot as plt
 
 platforms = {
     "ring" : "../platforms/ring/config.xml",
@@ -32,38 +34,75 @@ implementation = {
     # "scatter" : "../implementation/scatter.c",
     # "reduce_scatter" : "../implementation/reduce_scatter.c",
 }
+data_paths = {
+    "bcast" : "./plot_data/bcast/",
+}
 
-for imp_name,imp_file in implementation.items() :
-    for plat_name,plat_file in platforms.items() :
-        subprocess.run(["smpicc", "-O4", imp_file], capture_output=True)
 
-        trace_filename = "trace_files/" + imp_name + "_" + plat_name + ".trace"
-        # dump_filename = "dump_files/" + imp_name + "_" + plat_name + ".dump"
-        dump_filename = imp_name + "_" + plat_name + ".csv"
+def produce_data() :
 
-        data = [["size","time"]]
+    for imp_name,imp_file in implementation.items() :
+        for plat_name,plat_file in platforms.items() :
+            subprocess.run(["smpicc", "-O4", imp_file], capture_output=True)
 
-        compile_proc = subprocess.run(["smpicc", "-O4", imp_file], capture_output=True)
-        sz = 1
-        while (sz <= 2048) :
-            simulate_proc = subprocess.run(["smpirun",
-                "-hostfile",
-                hostfiles[plat_name],
-                "-platform",
-                plat_file,
-                "./a.out",
-                "--cfg=tracing:yes",
-                "--cfg=tracing/smpi:yes",
-                "--cfg=tracing/smpi/internals:yes",
-                "--cfg=tracing/uncategorized:yes",
-                "--cfg=tracing/filename:" + trace_filename,
-                str(sz)
-                ], capture_output=True)
-            sz = sz*2
-            console_op = simulate_proc.stdout.decode("utf-8").strip()
-            data.append([sz,int(console_op)])
+            trace_filename = "trace_files/" + imp_name + "_" + plat_name + ".trace"
+            # dump_filename = "dump_files/" + imp_name + "_" + plat_name + ".dump"
+            dump_filename = imp_name + "_" + plat_name + ".csv"
 
-        with open('./plot_data/' + dump_filename , 'w') as csvFile:
-            writer = csv.writer(csvFile)
-            writer.writerows(data)
+            data = [["size","time"]]
 
+            compile_proc = subprocess.run(["smpicc", "-O4", imp_file], capture_output=True)
+            sz = 1
+            while (sz <= 2048) :
+                final_val = 0;
+
+                simulate_proc = subprocess.run(["smpirun",
+                    "-hostfile",
+                    hostfiles[plat_name],
+                    "-platform",
+                    plat_file,
+                    "./a.out",
+                    "--cfg=tracing:yes",
+                    "--cfg=tracing/smpi:yes",
+                    "--cfg=tracing/smpi/internals:yes",
+                    "--cfg=tracing/uncategorized:yes",
+                    "--cfg=tracing/filename:" + trace_filename,
+                    str(sz)
+                    ], capture_output=True)
+                console_op = simulate_proc.stdout.decode("utf-8").strip()
+                final_val += int(console_op)
+                
+                data.append([sz,int(console_op)])
+                sz = sz*2
+
+            with open(data_paths[imp_name] + dump_filename , 'w') as csvFile:
+                writer = csv.writer(csvFile)
+                writer.writerows(data)
+
+def plot_data() :
+    
+    for data_name,data_path in data_paths.items() :
+        for filename in os.listdir(data_path) :
+            x = []
+            y = []
+            t_path = data_path + filename
+            with open(t_path) as csv_file:
+                csv_reader = csv.reader(csv_file, delimiter=',')
+                line_count = 0
+                for row in csv_reader:
+                    if line_count == 0:
+                        pass
+                    else:
+                        x.append(int(row[0]))
+                        y.append(int(row[1]))
+                    line_count += 1
+            plt.plot(x,y,label=filename[0:-4])
+        plt.ylabel('Time')
+        plt.xlabel('Data Size')
+        plt.title("Bcast")
+        plt.legend(loc='upper right')
+        plt.savefig("./plots/"+filename.split('_')[0]+'.png')
+
+
+# produce_data()
+plot_data()

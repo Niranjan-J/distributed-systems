@@ -13,6 +13,7 @@
     <host id="host5" speed="5Gf"/>
     <host id="host6" speed="5Gf"/>
     <host id="host7" speed="5Gf"/>
+    <host id="host8" speed="5Gf"/>
     
     <link id="link0" bandwidth="125MBps" latency="100us"/>
 
@@ -44,7 +45,11 @@
         <link_ctn id="link0"/>
     </route>
 
-    <route src="host7" dst="host0">
+    <route src="host7" dst="host8">
+        <link_ctn id="link0"/>
+    </route>
+
+    <route src="host8" dst="host0">
         <link_ctn id="link0"/>
     </route>
     

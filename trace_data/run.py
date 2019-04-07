@@ -26,6 +26,7 @@ implementation = {
     "bcast" : "../implementation/bcast.c",
     "allgather" : "../implementation/allgather.c",
     "allreduce" : "../implementation/allreduce.c",
+    "alltoall" : "../implementation/alltoall.c",
     "gather" : "../implementation/gather.c",
     "reduce" : "../implementation/reduce.c",
     "scatter" : "../implementation/scatter.c",

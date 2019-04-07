@@ -1,11 +1,15 @@
 // Program that computes the sum of an array of elements in parallel using
 // MPI_Reduce.
-//
+
 #include <stdio.h>
 #include <stdlib.h>
-#include <mpi.h>
 #include <assert.h>
 #include <time.h>
+#include "mpi.h"
+#include <string.h>
+#include "xbt/sysdep.h"
+#include "xbt/log.h"
+#include "xbt/xbt_os_time.h"
 
 // Creates an array of random numbers. Each number has a value from 0 - 1
 float *create_rand_nums(int num_elements) {
@@ -19,7 +23,8 @@ float *create_rand_nums(int num_elements) {
 }
 
 int main(int argc, char** argv) {
-
+  xbt_os_timer_t tm = xbt_os_timer_new();
+    xbt_os_cputimer_start (tm);
   int num_elements_per_proc = 4;
 
   MPI_Init(&argc, &argv);
@@ -42,8 +47,8 @@ int main(int argc, char** argv) {
   }
 
   // Print the random numbers on each process
-  printf("Local sum for process %d - %f\n",
-         world_rank, local_sum);
+  // printf("Local sum for process %d - %f\n",
+  //        world_rank, local_sum);
 
   // Reduce all of the local sums into the global sum
   float global_sum;
@@ -51,13 +56,19 @@ int main(int argc, char** argv) {
              MPI_COMM_WORLD);
 
   // Print the result
-  if (world_rank == 0) {
-    printf("Total sum = %f\n", global_sum);
-  }
+  // if (world_rank == 0) {
+  //   printf("Total sum = %f\n", global_sum);
+  // }
 
   // Clean up
   free(rand_nums);
 
   MPI_Barrier(MPI_COMM_WORLD);
   MPI_Finalize();
+  xbt_os_cputimer_stop (tm);
+  if (world_rank == 0)
+  {
+    int ans = (int)1000000.0*xbt_os_timer_elapsed (tm);
+    printf("%d\n", ans);
+  }
 }

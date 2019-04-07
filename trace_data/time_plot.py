@@ -27,17 +27,19 @@ hostfiles = {
 }
 implementation = {
     "bcast" : "../implementation/bcast.c",
-    # "allgather" : "../implementation/allgather.c",
+    "allgather" : "../implementation/allgather.c",
     # "allreduce" : "../implementation/allreduce.c",
-    # "gather" : "../implementation/gather.c",
+    "gather" : "../implementation/gather.c",
     # "reduce" : "../implementation/reduce.c",
-    # "scatter" : "../implementation/scatter.c",
+    "scatter" : "../implementation/scatter.c",
     # "reduce_scatter" : "../implementation/reduce_scatter.c",
 }
 data_paths = {
     "bcast" : "./plot_data/bcast/",
+    "allgather" : "./plot_data/allgather/",
+    "gather" : "./plot_data/gather/",
+    "scatter" : "./plot_data/scatter/",
 }
-
 
 def produce_data() :
 
@@ -53,28 +55,22 @@ def produce_data() :
 
             compile_proc = subprocess.run(["smpicc", "-O4", imp_file], capture_output=True)
             sz = 1
-            while (sz <= 2048) :
+            while (sz <= 3000) :
                 final_val = 0;
-
-                simulate_proc = subprocess.run(["smpirun",
-                    "-hostfile",
-                    hostfiles[plat_name],
-                    "-platform",
-                    plat_file,
-                    "./a.out",
-                    "--cfg=tracing:yes",
-                    "--cfg=tracing/smpi:yes",
-                    "--cfg=tracing/smpi/internals:yes",
-                    "--cfg=tracing/uncategorized:yes",
-                    "--cfg=tracing/filename:" + trace_filename,
-                    str(sz)
-                    ], capture_output=True)
-                console_op = simulate_proc.stdout.decode("utf-8").strip()
-                final_val += int(console_op)
-                
-                data.append([sz,int(console_op)])
+                for i in range(0,5) :
+                    simulate_proc = subprocess.run(["smpirun",
+                        "-hostfile",
+                        hostfiles[plat_name],
+                        "-platform",
+                        plat_file,
+                        "./a.out",
+                        str(sz)
+                        ], capture_output=True)
+                    console_op = simulate_proc.stdout.decode("utf-8").strip()
+                    final_val += int(console_op)
+                data.append([sz,int(final_val/5)])
                 sz = sz*2
-
+            print(dump_filename)
             with open(data_paths[imp_name] + dump_filename , 'w') as csvFile:
                 writer = csv.writer(csvFile)
                 writer.writerows(data)
@@ -96,12 +92,13 @@ def plot_data() :
                         x.append(int(row[0]))
                         y.append(int(row[1]))
                     line_count += 1
-            plt.plot(x,y,label=filename[0:-4])
+            plt.plot(x,y,label=filename[0:-4].split('_')[1])
         plt.ylabel('Time')
         plt.xlabel('Data Size')
-        plt.title("Bcast")
+        plt.title(filename.split('_')[0])
         plt.legend(loc='upper right')
         plt.savefig("./plots/"+filename.split('_')[0]+'.png')
+        plt.clf()
 
 
 # produce_data()

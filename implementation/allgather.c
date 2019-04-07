@@ -4,8 +4,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <mpi.h>
 #include <assert.h>
+#include "mpi.h"
+#include <string.h>
+#include "xbt/sysdep.h"
+#include "xbt/log.h"
+#include "xbt/xbt_os_time.h"
 
 // Creates an array of random numbers. Each number has a value from 0 - 1
 float *create_rand_nums(int num_elements) {
@@ -28,8 +32,17 @@ float compute_avg(float *array, int num_elements) {
   return sum / num_elements;
 }
 
-int main(int argc, char** argv) {
+int* genArr( int n)
+{
+  int* a = (int*)malloc(sizeof(int) * n);
+  srand(time(0));
+  for(int i=0;i<n;i++)  a[i] = rand()%100;
+  return a;
+}
 
+int main(int argc, char** argv) {
+  xbt_os_timer_t tm = xbt_os_timer_new();
+    xbt_os_cputimer_start (tm);
   int num_elements_per_proc = atoi(argv[1]);
   // Seed the random number generator to get different results each time
   srand(time(NULL));
@@ -40,6 +53,9 @@ int main(int argc, char** argv) {
   MPI_Comm_rank(MPI_COMM_WORLD, &world_rank);
   int world_size;
   MPI_Comm_size(MPI_COMM_WORLD, &world_size);
+
+  int n = atoi(argv[1]);
+  int *arr = genArr(n);
 
   // Create a random array of elements on the root process. Its total
   // size will be the number of elements per process times the number
@@ -65,14 +81,14 @@ int main(int argc, char** argv) {
   // Gather all partial averages down to all the processes
   float *sub_avgs = (float *)malloc(sizeof(float) * world_size);
   assert(sub_avgs != NULL);
-  MPI_Allgather(&sub_avg, 1, MPI_FLOAT, sub_avgs, 1, MPI_FLOAT, MPI_COMM_WORLD);
+  MPI_Allgather(&sub_avg, n, MPI_FLOAT, sub_avgs, 1, MPI_FLOAT, MPI_COMM_WORLD);
 
   // Now that we have all of the partial averages, compute the
   // total average of all numbers. Since we are assuming each process computed
   // an average across an equal amount of elements, this computation will
   // produce the correct answer.
   float avg = compute_avg(sub_avgs, world_size);
-  printf("Avg of all elements from proc %d is %f\n", world_rank, avg);
+  // printf("Avg of all elements from proc %d is %f\n", world_rank, avg);
 
   // Clean up
   if (world_rank == 0) {
@@ -83,4 +99,10 @@ int main(int argc, char** argv) {
 
   MPI_Barrier(MPI_COMM_WORLD);
   MPI_Finalize();
+  xbt_os_cputimer_stop (tm);
+  if (world_rank == 0)
+  {
+    int ans = (int)1000000.0*xbt_os_timer_elapsed (tm);
+    printf("%d\n", ans);
+  }
 }

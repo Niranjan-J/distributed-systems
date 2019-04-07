@@ -1,8 +1,16 @@
-#include "mpi.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include "mpi.h"
+#include <string.h>
+#include "xbt/sysdep.h"
+#include "xbt/log.h"
+#include "xbt/xbt_os_time.h"
 
 int main(int argc, char *argv[])
 {
+    xbt_os_timer_t tm = xbt_os_timer_new();
+    xbt_os_cputimer_start (tm);
     int count = 1000;
     int *in, *out, *sol;
     int i, fnderr=0;
@@ -37,5 +45,10 @@ int main(int argc, char *argv[])
     free( out );
     free( sol );
     MPI_Finalize();
+    if (rank == 0)
+    {
+        int ans = (int)-1000000.0*xbt_os_timer_elapsed (tm);
+        printf("%d\n", ans);
+    }
     return fnderr;
 }

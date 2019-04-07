@@ -1,5 +1,5 @@
 #This file was generated using SimGrid-3.20.0
-#[./a.out --cfg=smpi/privatization:1 --cfg=surf/precision:1e-9 --cfg=network/model:SMPI --cfg=tracing:yes --cfg=tracing/smpi:yes --cfg=tracing/smpi/internals:yes --cfg=tracing/uncategorized:yes --cfg=tracing/filename:trace_files/reduce_scatter_hypercube2D.trace ../platforms/hypercube-2d/config.xml smpitmp-appFN7EM0 ]
+#[./a.out --cfg=smpi/privatization:1 --cfg=surf/precision:1e-9 --cfg=network/model:SMPI --cfg=tracing:yes --cfg=tracing/smpi:yes --cfg=tracing/smpi/internals:yes --cfg=tracing/uncategorized:yes --cfg=tracing/filename:trace_files/reduce_scatter_hypercube2D.trace ../platforms/hypercube-2d/config.xml smpitmp-appAFZjyh ]
 %EventDef PajeDefineContainerType 0
 %       Alias string
 %       Type string
@@ -159,24 +159,24 @@
 13 0.000000 2 9
 8 0.000000 8 4 0.000000
 9 0.000000 8 4 5000000000.000000
-8 0.000000 8 3 0.000000
-9 0.000000 8 3 5000000000.000000
 8 0.000000 8 2 0.000000
 9 0.000000 8 2 5000000000.000000
+8 0.000000 8 3 0.000000
+9 0.000000 8 3 5000000000.000000
 8 0.000000 8 1 0.000000
 9 0.000000 8 1 5000000000.000000
 5 17 2 PMPI_Reduce_scatter "0 1 0"
 5 18 2 PMPI_Finalize "0 1 0"
 10 0.000000 8 4 5000000000.000000
-10 0.000000 8 3 5000000000.000000
 10 0.000000 8 2 5000000000.000000
+10 0.000000 8 3 5000000000.000000
 10 0.000000 8 1 5000000000.000000
 12 0.000000 2 9 17
 15 0.000000 3 0 PTP 9 4_1_-112_1
-12 0.000000 2 8 17
-15 0.000000 3 0 PTP 8 3_1_-112_2
 12 0.000000 2 7 17
-15 0.000000 3 0 PTP 7 2_1_-112_3
+15 0.000000 3 0 PTP 7 2_1_-112_2
+12 0.000000 2 8 17
+15 0.000000 3 0 PTP 8 3_1_-112_3
 12 0.000000 2 6 17
 8 0.000201 12 5 0.000000
 9 0.000201 12 5 57738095.238095
@@ -188,7 +188,7 @@
 10 0.000202 12 5 57738095.238095
 10 0.000202 12 5 2886904.761905
 16 0.000202 3 0 PTP 6 4_1_-112_1
-16 0.000202 3 0 PTP 6 2_1_-112_3
+16 0.000202 3 0 PTP 6 2_1_-112_2
 9 0.000403 12 5 57738095.238095
 9 0.000403 12 5 57738095.238095
 9 0.000403 12 5 2886904.761905
@@ -197,7 +197,7 @@
 10 0.000403 12 5 57738095.238095
 10 0.000403 12 5 2886904.761905
 10 0.000403 12 5 2886904.761905
-16 0.000403 3 0 PTP 6 3_1_-112_2
+16 0.000403 3 0 PTP 6 3_1_-112_3
 15 0.000403 3 0 PTP 6 1_2_-334_4
 15 0.000403 3 0 PTP 6 1_3_-334_5
 15 0.000403 3 0 PTP 6 1_4_-334_6

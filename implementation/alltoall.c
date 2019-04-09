@@ -12,12 +12,22 @@
 #define EXIT_SUCCESS 0
 #define EXIT_FAILURE 1
 #endif
+
+
+int* genArr( int n)
+{
+  int* a = (int*)malloc(sizeof(int) * n);
+  srand(time(0));
+  for(int i=0;i<n;i++)  a[i] = rand()%100;
+  return a;
+}
+
 int main( int argc, char *argv[] )
 {
     xbt_os_timer_t tm = xbt_os_timer_new();
     xbt_os_cputimer_start (tm);
     int rank, size;
-    int chunk = 128;
+    int chunk = atoi(argv[1]);
     int i;
     int *sb;
     int *rb;
@@ -38,12 +48,9 @@ int main( int argc, char *argv[] )
                 MPI_Abort(MPI_COMM_WORLD,EXIT_FAILURE);
         }
     }
-    sb = (int *)malloc(size*chunk*sizeof(int));
-    rb = (int *)malloc(size*chunk*sizeof(int));
-    for ( i=0 ; i < size*chunk ; ++i ) {
-        sb[i] = rank + 1;
-        rb[i] = 0;
-    }
+    sb = genArr(chunk);
+    rb = genArr(chunk);
+
     status = MPI_Alltoall(sb, chunk, MPI_INT, rb, chunk, MPI_INT, MPI_COMM_WORLD);
     MPI_Allreduce( &status, &gstatus, 1, MPI_INT, MPI_SUM, MPI_COMM_WORLD );
     /*if (rank == 0) {

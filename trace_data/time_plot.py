@@ -28,17 +28,20 @@ hostfiles = {
 implementation = {
     "bcast" : "../implementation/bcast.c",
     "allgather" : "../implementation/allgather.c",
-    # "allreduce" : "../implementation/allreduce.c",
     "gather" : "../implementation/gather.c",
-    # "reduce" : "../implementation/reduce.c",
     "scatter" : "../implementation/scatter.c",
-    # "reduce_scatter" : "../implementation/reduce_scatter.c",
+    "alltoall" : "../implementation/alltoall.c",
+    "allreduce" : "../implementation/allreduce.c",
 }
+    # "reduce" : "../implementation/reduce.c",
+    # "reduce_scatter" : "../implementation/reduce_scatter.c",
 data_paths = {
     "bcast" : "./plot_data/bcast/",
     "allgather" : "./plot_data/allgather/",
     "gather" : "./plot_data/gather/",
     "scatter" : "./plot_data/scatter/",
+    "alltoall" : "./plot_data/alltoall/",
+    "allreduce" : "./plot_data/allreduce/",
 }
 
 def produce_data() :
@@ -54,22 +57,29 @@ def produce_data() :
             data = [["size","time"]]
 
             compile_proc = subprocess.run(["smpicc", "-O4", imp_file], capture_output=True)
-            sz = 1
+            sz = 1 
             while (sz <= 3000) :
-                final_val = 0;
-                for i in range(0,5) :
+                final_val = 0
+                cnt = 0
+                for i in range(0,25) :
                     simulate_proc = subprocess.run(["smpirun",
+                        "--cfg=smpi/host-speed:1",
                         "-hostfile",
                         hostfiles[plat_name],
                         "-platform",
                         plat_file,
                         "./a.out",
-                        str(sz)
+                        str(sz),
                         ], capture_output=True)
                     console_op = simulate_proc.stdout.decode("utf-8").strip()
-                    final_val += int(console_op)
-                data.append([sz,int(final_val/5)])
-                sz = sz*2
+                    try:
+                        final_val += int(console_op)
+                        cnt = cnt + 1
+                    except:
+                        print(console_op)
+                if cnt != 0 :
+                    data.append([sz,int(final_val/cnt)])
+                sz = sz * 2
             print(dump_filename)
             with open(data_paths[imp_name] + dump_filename , 'w') as csvFile:
                 writer = csv.writer(csvFile)
@@ -96,10 +106,10 @@ def plot_data() :
         plt.ylabel('Time')
         plt.xlabel('Data Size')
         plt.title(filename.split('_')[0])
-        plt.legend(loc='upper right')
+        plt.legend(loc='upper left')
         plt.savefig("./plots/"+filename.split('_')[0]+'.png')
         plt.clf()
 
 
-# produce_data()
+produce_data()
 plot_data()
